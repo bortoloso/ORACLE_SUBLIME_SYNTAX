@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+if () then
+    
+elsif () then
+    
+else
+    
+end if;
+]]></content>
+    <description>IF+ELSIF+ELSE structure</description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ifelse</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>

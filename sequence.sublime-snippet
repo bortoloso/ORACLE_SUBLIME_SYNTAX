@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+create sequence nome_sequence
+    increment by 1
+    start with 1
+    maxvalue  9999999999
+    cycle
+    nocache;
+]]></content>
+    <description>SEQUENCE structure</description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>sequence</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>

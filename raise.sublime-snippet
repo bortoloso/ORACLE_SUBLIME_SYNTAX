@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+raise_application_error(-20011,'erro');
+]]></content>
+    <description>RAISE_APPLICATION_ERROR call</description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>raise</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>

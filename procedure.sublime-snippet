@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+procedure nome_procedure(
+    p_parametro varchar2) is 
+
+begin
+
+commit;
+
+end nome_procedure;
+/
+]]></content>
+    <description> PROCEDURE structure </description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>procedure</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>

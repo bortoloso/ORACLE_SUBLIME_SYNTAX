@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+cursor c01 is
+    select 1 ds
+      from dual
+     where 1 = 1
+    order by
+            ds;
+
+l_c01 c01%rowtype;
+]]></content>
+    <description>CURSOR structure</description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>cursor</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>

@@ -1,0 +1,39 @@
+<snippet>
+    <content><![CDATA[
+create or replace
+package package_name_pck as
+    
+    procedure set_opcao(
+        ie_opcao_p varchar2);
+    function get_opcao
+        return varchar2;
+    
+end package_name_pck;
+/
+
+create or replace
+package body package_name_pck as
+
+ie_opcao_w      varchar2(1);
+
+    procedure set_opcao(
+        ie_opcao_p varchar2) as
+    begin
+        ie_opcao_w := ie_opcao_p;
+    end;
+    
+    function get_opcao
+        return varchar2 as
+    begin
+        return ie_opcao_w;
+    end;    
+    
+end package_name_pck;
+/
+]]></content>
+    <description>PACKAGE+BODY structure</description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>package</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>

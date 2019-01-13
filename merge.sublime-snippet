@@ -1,0 +1,21 @@
+<snippet>
+    <content><![CDATA[
+merge into tabela a
+using (<dados condicionais>) y
+on (<restricao>)
+when matched then
+update
+set a.campo = <valor>
+where 1 = 1
+when not matched them
+insert  (campo01,
+    campo02)
+values  (<valor01>,
+    <valor02>);
+]]></content>
+    <description>MERGE structure</description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>merge</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>
