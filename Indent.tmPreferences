@@ -8,6 +8,10 @@
 	<string>source.plsql.oracle</string>
 	<key>settings</key>
 	<dict>
+      <key>decreaseIndentPattern</key>
+      <string>(?i)^\s*(is|as|begin|end|then|else|elsif|exception)\b</string>
+      <key>increaseIndentPattern</key>
+      <string>(?i)^\s*(is|as|begin|if|then|else|elsif|loop|exception)\b</string>
 		<key>shellVariables</key>
 		<array>
          <dict>
