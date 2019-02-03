@@ -12,10 +12,10 @@ exit when l_${1:c01}.count = 0;
     end loop; -- end loop l_${1:c01}
 
     begin
-    forall i in l_${1:c01}.first .. l_${1:c01}.last
+    forall i in l_${1:c01}.first .. l_${1:c01}.last save exceptions
         update tabela
            set campo1 = 0
-         where campo2 = l_c01(i).campo2
+         where campo2 = l_${1:c01}(i).campo2
         ;
     commit;
     exception

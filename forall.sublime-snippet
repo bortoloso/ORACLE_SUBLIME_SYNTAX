@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+forall i in ${1:array}.first .. ${1:array}.last save exceptions
+    update tabela
+       set campo1 = 0
+     where campo2 = ${1:array}.campo2
+    ;
+commit;$0
+]]></content>
+    <description>FORALL structure</description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>forall</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>
