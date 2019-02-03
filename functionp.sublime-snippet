@@ -1,0 +1,29 @@
+<snippet>
+    <content><![CDATA[
+/* tipos publicos na package */
+type t_${2:return}_row is record(
+    field varchar2(255) -- Valor do registro
+    );
+type t_${2:return}_data is table of t_${2:return}_row;
+
+create or replace
+function ${1:nome_funcao}(
+    p_value varchar2)
+    return t_${2:return}_data parallel_enable pipelined is
+
+l_${2:return}_row t_${2:return}_row;
+begin
+$0
+pipe row (l_${2:return}_row);
+return;
+
+end ${1:nome_funcao};
+/
+
+]]></content>
+    <description> FUNCTION PIPELINED structure </description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>functionp</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>
