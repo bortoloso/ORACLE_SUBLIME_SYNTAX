@@ -4,7 +4,7 @@ begin
 
 exception
 when others then
-    
+    $0
 end;
 ]]></content>
     <description>EXCEPTION structure</description>

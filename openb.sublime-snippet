@@ -1,0 +1,38 @@
+<snippet>
+    <content><![CDATA[
+-- dml_errors exception;
+-- pragma exception_init(dml_errors, -24381);
+
+open ${1:c01};
+loop fetch ${1:c01} bulk collect into l_${1:c01} limit 1000;
+exit when l_${1:c01}.count = 0;
+    $0
+    for i in 1..l_${1:c01}.count loop
+        null;
+    end loop; -- end loop l_${1:c01}
+
+    begin
+    forall i in l_${1:c01}.first .. l_${1:c01}.last
+        update tabela
+           set campo1 = 0
+         where campo2 = l_c01(i).campo2
+        ;
+    commit;
+    exception
+    when dml_errors then
+        for i in 1 .. sql%bulk_exceptions.count loop
+            null;
+            -- 'ErrorIndex: ' || i ||
+            -- ' Indice: ' || sql%bulk_exceptions(i).error_index ||
+            -- ' Mensagem: ' || sqlerrm(-sql%bulk_exceptions(i).error_code));
+        end loop; -- end loop bulk_exceptions
+    end;
+end loop; -- end loop ${1:c01}
+close ${1:c01};
+]]></content>
+    <description>OPEN BULK CURSOR structure</description>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>openb</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.plsql.oracle</scope>
+</snippet>

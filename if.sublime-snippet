@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
-if (true) then
-    
+if (${1:true}) then
+    $0
 end if;
 ]]></content>
     <description>IF structure</description>

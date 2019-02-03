@@ -1,9 +1,12 @@
 <snippet>
     <content><![CDATA[
-type r_array is record (
-    vl_sinalnumber(15,4));
-type t_array is table of r_array index by pls_integer;
-l_array t_array;
+type r_${1:1array} is record (
+    nr number(15,4)
+  , ds varchar2(4000)
+  , dt date);
+type t_${1:1array} is table of r_${1:1array} index by pls_integer;
+l_${1:1array} t_${1:1array};
+$0
 ]]></content>
     <description>ARRAY structure</description>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

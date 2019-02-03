@@ -1,15 +1,16 @@
 <snippet>
     <content><![CDATA[
 create or replace
-function nome_funcao(
-    p_parametro varchar2)
-    return tipo_retorno is
+function ${1:nome_funcao}(
+    p_value varchar2)
+    return ${2:varchar2} is
 
+l_return ${2:varchar2}${3:(1)};
 begin
+$0
+return l_return;
 
-return null;
-
-end nome_funcao;
+end ${1:nome_funcao};
 /
 ]]></content>
     <description> FUNCTION structure </description>

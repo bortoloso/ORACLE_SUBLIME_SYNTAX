@@ -1,8 +1,8 @@
 <snippet>
     <content><![CDATA[
-if () then
-    
-elsif () then
+if (${1:true}) then
+    $0
+elsif (true) then
     
 else
     

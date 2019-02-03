@@ -1,34 +1,35 @@
 <snippet>
     <content><![CDATA[
 create or replace
-package package_name_pck as
+package pkg_${1:package_name} is
     
     procedure set_opcao(
-        ie_opcao_p varchar2);
+        p_value varchar2);
     function get_opcao
         return varchar2;
     
-end package_name_pck;
+end pkg_${1:package_name};
 /
-
+$0
 create or replace
-package body package_name_pck as
+package body pkg_${1:package_name} is
 
-ie_opcao_w      varchar2(1);
+    l_value varchar2(1);
 
     procedure set_opcao(
-        ie_opcao_p varchar2) as
+        p_value varchar2
+        ) is
     begin
-        ie_opcao_w := ie_opcao_p;
+        l_value := p_value;
     end;
     
     function get_opcao
-        return varchar2 as
+        return varchar2 is
     begin
-        return ie_opcao_w;
+        return l_value;
     end;    
     
-end package_name_pck;
+end pkg_${1:package_name};
 /
 ]]></content>
     <description>PACKAGE+BODY structure</description>

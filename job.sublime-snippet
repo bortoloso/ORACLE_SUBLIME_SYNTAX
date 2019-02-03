@@ -1,16 +1,20 @@
 <snippet>
     <content><![CDATA[
-if () then
-    
-elsif () then
-    
-else
-    
-end if;
+declare
+
+l_job number;
+begin
+dbms_job.submit(l_job
+               ,'procedure(param);'
+               ,sysdate
+               ,'trunc(sysdate + 1) + 03/24'
+               );
+end;
+/
 ]]></content>
-    <description>IF+ELSIF+ELSE structure</description>
+    <description>JOB structure</description>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>ifelse</tabTrigger>
+    <tabTrigger>job</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.plsql.oracle</scope>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-raise_application_error(-20011,'erro');
+raise_application_error(-20000,'${1:Mensagem}'$0);
 ]]></content>
     <description>RAISE_APPLICATION_ERROR call</description>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

@@ -1,15 +1,12 @@
 <snippet>
     <content><![CDATA[
-open c01;
+open ${1:c01};
 loop
-fetch c01 into  
-    l_c01;
-exit when c01%notfound;
-    begin
-    
-    end;
+fetch ${1:c01} into l_${1:c01};
+exit when ${1:c01}%notfound;
+    $0
 end loop;
-close c01;
+close ${1:c01};
 ]]></content>
     <description>OPEN CURSOR structure</description>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

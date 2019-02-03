@@ -1,13 +1,14 @@
 <snippet>
     <content><![CDATA[
-procedure nome_procedure(
-    p_parametro varchar2) is 
+create or replace
+procedure ${1:nome_procedure}(
+    p_value varchar2) is 
 
 begin
-
+$0
 commit;
 
-end nome_procedure;
+end ${1:nome_procedure};
 /
 ]]></content>
     <description> PROCEDURE structure </description>

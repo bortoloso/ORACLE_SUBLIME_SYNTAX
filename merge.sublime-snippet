@@ -1,17 +1,26 @@
 <snippet>
     <content><![CDATA[
-merge into tabela a
-using (<dados condicionais>) y
-on (<restricao>)
+merge
+ into ${1:target_table} t
+using ${2:source_table} s
+on  (s.column1 = t.column1)
 when matched then
 update
-set a.campo = <valor>
-where 1 = 1
-when not matched them
-insert  (campo01,
-    campo02)
-values  (<valor01>,
-    <valor02>);
+   set t.column3 = s.column3,
+       t.column4 = s.coulmn4  
+ where t.column1 = s.column1
+   and t.column2 = s.column2
+when not matched then
+insert ( t.column1,
+     t.column2,
+     t.column3,
+     t.column4 )
+values ( s.coulmn1,
+     s.coulmn2,
+     s.coulmn3,
+     s.coulmn4)
+;
+$0
 ]]></content>
     <description>MERGE structure</description>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
