@@ -51,7 +51,8 @@ contexts:
       captures:
         1: keyword.other.oracle
         2: entity.name.type.oracle
-    - match: '(?i)^\s*(overriding)?\s*(member|constructor|static)?\s*(function|procedure)\s+([-a-z0-9_]+)'
+    # - match: '(?i)^\s*(overriding)?\s*(member|constructor|static)?\s*(function|procedure)\s+([-a-z0-9_]+)'
+    - match: '(?i)\b+(overriding)?\s*(member|constructor|static)?\s*(function|procedure)\s+([-a-z0-9_]+)'
       scope: meta.procedure.oracle
       captures:
         1: keyword.other.oracle

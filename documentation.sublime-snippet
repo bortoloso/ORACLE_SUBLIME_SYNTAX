@@ -2,7 +2,7 @@
     <content><![CDATA[
 /*
 ===============================================================================
-Purpose: $1
+Purpose: $0
 
 Remarks: 
 
@@ -12,7 +12,6 @@ putmyname  dd.mmm.yyyy Description
 
 ===============================================================================
 */
-$0
 ]]></content>
     <description> Comment documentation </description>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
